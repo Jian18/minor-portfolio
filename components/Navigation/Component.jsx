@@ -1,6 +1,6 @@
-import React from "react";
-import style from "./Navigation.module.css";
-import Link from "next/link";
+import React from 'react';
+import style from './Navigation.module.css';
+import Link from 'next/link';
 
 function Navigation() {
   return (
