@@ -1,5 +1,5 @@
-import React from "react";
-import style from "./Buttons.module.css";
+import React from 'react';
+import style from './Buttons.module.css';
 
 function Buttons() {
   return (

@@ -6,44 +6,44 @@
 
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 @font-face {
-  font-family: "MuseoModerno";
-  src: url("/assets/fonts/MuseoModerno-VariableFont_wght.ttf") format('truetype');
+  font-family: 'MuseoModerno';
+  src: url('/assets/fonts/MuseoModerno-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
 }
 
-/* @font-face {
+@font-face {
   font-family: DarkerGrotesque-Black;
-  src: url(./public/assets/publiDarkerGrotesque-Black.ttf);
+  src: url(/assets/publiDarkerGrotesque-Black.ttf);
 }
 
 @font-face {
   font-family: DarkerGrotesque-Bold;
-  src: url(./public/assets/DarkerGrotesque-Bold.ttf);
+  src: url(/assets/DarkerGrotesque-Bold.ttf);
 }
 @font-face {
   font-family: DarkerGrotesque-ExtraBold;
-  src: url(./public/assets/DarkerGrotesque-ExtraBold.ttf);
+  src: url(/assets/DarkerGrotesque-ExtraBold.ttf);
 }
 @font-face {
   font-family: DarkerGrotesque-Light;
-  src: url(./public/assets/DarkerGrotesque-Light.ttf);
+  src: url(/assets/DarkerGrotesque-Light.ttf);
 }
 @font-face {
   font-family: DarkerGrotesque-Meedium;
-  src: url(./public/assets/DarkerGrotesque-Meedium.ttf);
+  src: url(/assets/DarkerGrotesque-Meedium.ttf);
 }
 @font-face {
   font-family: DarkerGrotesque-Regular;
-  src: url(./public/assets/DarkerGrotesque-Regular.ttf);
+  src: url(/assets/DarkerGrotesque-Regular.ttf);
 }
 @font-face {
   font-family: DarkerGrotesque-SemiBold;
-  src: url(./public/assets/DarkerGrotesque-SemiBold.ttf);
-} */
+  src: url(/assets/DarkerGrotesque-SemiBold.ttf);
+}
