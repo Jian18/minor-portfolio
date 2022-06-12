@@ -1,0 +1,48 @@
+.background {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.cirkel1 {
+  position: absolute;
+  /* top: 7rem;
+  left: 46.6rem; */
+  top: 7rem;
+  left: 46.6rem;
+}
+.cirkel2 {
+  position: absolute;
+  top: 73.3rem;
+  left: 114.9rem;
+}
+.cirkel3 {
+  position: absolute;
+  top: 29rem;
+  left: 87rem;
+}
+.cirkel4 {
+  position: absolute;
+  top: 24rem;
+  left: 18.1rem;
+}
+.cirkel5 {
+  position: absolute;
+  top: 7.6rem;
+  left: 68.6rem;
+}
+.cirkel6 {
+  position: absolute;
+  top: 86.5rem;
+  left: 93.7rem;
+}
+.cirkel7 {
+  position: absolute;
+  top: 49.2rem;
+  left: 118.5rem;
+}
+.cirkel8 {
+  position: absolute;
+  top: 16.8rem;
+  left: 103.1rem;
+}

@@ -3,6 +3,8 @@
   --green: #8ee539;
   --blue-dark: #0a198c;
   --blue-light: #18c0ed;
+  --width: 100%;
+  --height: 100%;
 }
 
 * {
@@ -11,11 +13,15 @@
   padding: 0;
 }
 
-html,
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--black);
+  font-size: 1.6rem;
 }
 
 @font-face {
