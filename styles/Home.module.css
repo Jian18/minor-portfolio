@@ -1,48 +1,51 @@
-.background {
+.containerCirkel {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.containerChild {
   position: relative;
   height: 100vh;
   width: 100vw;
 }
-
 .cirkel1 {
   position: absolute;
-  /* top: 7rem;
-  left: 46.6rem; */
-  top: 7rem;
-  left: 46.6rem;
+  top: 7%;
+  left: 33%;
 }
 .cirkel2 {
   position: absolute;
-  top: 73.3rem;
-  left: 114.9rem;
+  top: 72%;
+  left: 80%;
 }
 .cirkel3 {
   position: absolute;
-  top: 29rem;
-  left: 87rem;
+  top: 29%;
+  left: 65%;
 }
 .cirkel4 {
   position: absolute;
-  top: 24rem;
-  left: 18.1rem;
+  top: 38%;
+  left: 14%;
 }
 .cirkel5 {
   position: absolute;
-  top: 7.6rem;
-  left: 68.6rem;
+  top: 8%;
+  left: 48%;
 }
 .cirkel6 {
   position: absolute;
-  top: 86.5rem;
-  left: 93.7rem;
+  top: 85%;
+  left: 65%;
 }
 .cirkel7 {
   position: absolute;
-  top: 49.2rem;
-  left: 118.5rem;
+  top: 48%;
+  left: 82%;
 }
 .cirkel8 {
   position: absolute;
-  top: 16.8rem;
-  left: 103.1rem;
+  top: 17%;
+  left: 72%;
 }
