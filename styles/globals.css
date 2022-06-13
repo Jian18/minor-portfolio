@@ -1,49 +1,68 @@
+:root {
+  --black: #1e1e1e;
+  --green: #8ee539;
+  --blue-dark: #0a198c;
+  --blue-light: #18c0ed;
+  --width: 100%;
+  --height: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html,
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--black);
+  font-size: 1.6rem;
 }
 
 @font-face {
-  font-family: "MuseoModerno";
-  src: url("/assets/fonts/MuseoModerno-VariableFont_wght.ttf") format('truetype');
+  font-family: 'MuseoModerno';
+  src: url('/assets/fonts/MuseoModerno-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
 }
 
-/* @font-face {
-  font-family: DarkerGrotesque-Black;
-  src: url(./public/assets/publiDarkerGrotesque-Black.ttf);
+@font-face {
+  font-family: 'DarkerGrotesque-Black';
+  src: url('/assets/publiDarkerGrotesque-Black.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: DarkerGrotesque-Bold;
-  src: url(./public/assets/DarkerGrotesque-Bold.ttf);
+  font-family: 'DarkerGrotesque-Bold';
+  src: url('/assets/DarkerGrotesque-Bold.ttf') format('truetype');
 }
+
 @font-face {
-  font-family: DarkerGrotesque-ExtraBold;
-  src: url(./public/assets/DarkerGrotesque-ExtraBold.ttf);
+  font-family: 'DarkerGrotesque-ExtraBold';
+  src: url('/assets/DarkerGrotesque-ExtraBold.ttf') format('truetype');
 }
+
 @font-face {
-  font-family: DarkerGrotesque-Light;
-  src: url(./public/assets/DarkerGrotesque-Light.ttf);
+  font-family: 'DarkerGrotesque-Light';
+  src: url('/assets/DarkerGrotesque-Light.ttf') format('truetype');
 }
+
 @font-face {
-  font-family: DarkerGrotesque-Meedium;
-  src: url(./public/assets/DarkerGrotesque-Meedium.ttf);
+  font-family: 'DarkerGrotesque-Meedium';
+  src: url('/assets/DarkerGrotesque-Meedium.ttf') format('truetype');
 }
+
 @font-face {
-  font-family: DarkerGrotesque-Regular;
-  src: url(./public/assets/DarkerGrotesque-Regular.ttf);
+  font-family: 'DarkerGrotesque-Regular';
+  src: url('/assets/DarkerGrotesque-Regular.ttf') format('truetype');
 }
+
 @font-face {
-  font-family: DarkerGrotesque-SemiBold;
-  src: url(./public/assets/DarkerGrotesque-SemiBold.ttf);
-} */
+  font-family: 'DarkerGrotesque-SemiBold';
+  src: url('/assets/DarkerGrotesque-SemiBold.ttf') format('truetype');
+}
