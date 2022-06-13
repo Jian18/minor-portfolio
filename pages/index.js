@@ -17,15 +17,6 @@ import {
 } from '../public/assets/bolletjes/cirkel';
 
 export default function HomePage() {
-  const cirkel1 = useRef();
-  const cirkel2 = useRef();
-  const cirkel3 = useRef();
-  const cirkel4 = useRef();
-  const cirkel5 = useRef();
-  const cirkel6 = useRef();
-  const cirkel7 = useRef();
-  const cirkel8 = useRef();
-
   const cirkelRef = useRef();
   const q = gsap.utils.selector(cirkelRef);
 
