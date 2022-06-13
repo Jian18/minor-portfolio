@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Buttons.module.css";
 
-function Buttons() {
+function Buttons({ buttonText }) {
   return (
     <div>
-      <button className={style.button}>Button</button>
+      <button className={style.button}>{buttonText}</button>
     </div>
   );
 }
