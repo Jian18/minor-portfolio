@@ -1,11 +1,15 @@
 import React from 'react';
 import Buttons from '../../components/Buttons/Component';
+import style from './PersonPage.module.css';
 
 function PersonPage() {
   return (
     <div>
-      <Buttons buttonText="Vorige" />
-      <Buttons buttonText="Volgende" />
+      <div style={{ color: 'red' }}>
+        <p>Hallo dit is echt gekloot</p>
+        <Buttons buttonText="Vorige" />
+        <Buttons buttonText="Volgende" />
+      </div>
       <div>Image</div>
       <div>Naam {/* Hier komt naam props  */}</div>
 
