@@ -1,3 +1,49 @@
-.button {
-  background-color: blue;
+.NextButton {
+  background-color: var(--blue-light);
+  border: var(--blue-light) 1px solid;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 3.2rem 1.6rem 1.6rem;
+  border-radius: 0 100px 100px 0;
+}
+
+.PreviousButton {
+  background-color: transparent;
+  border: var(--blue-light) 1px solid;
+  color: var(--blue-light);
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 3.2rem 1.6rem 1.6rem;
+  border-radius: 0 100px 100px 0;
+}
+
+.ReadMoreButton {
+  color: var(--blue-light);
+  background-color: rgba(29, 29, 30, 0.5);
+  width: 194.52px;
+  height: 71.87px;
+  border-radius: 100px;
+  border-width: 1px;
+
+}
+
+.NextButton:hover{
+  background-color: transparent;
+  border: white 1px solid;
+  color: white;
+}
+
+.PreviousButton:hover{
+  border: white 1px solid;
+  color: white;
+}
+
+.ReadMoreButton:hover{
+  border: white 1px solid;
+
+}
+
+.icon{
+  padding-right: 0.8rem;
 }
