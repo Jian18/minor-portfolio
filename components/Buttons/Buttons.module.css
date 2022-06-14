@@ -20,11 +20,11 @@
 
 .ReadMoreButton {
   color: var(--blue-light);
-  background-color: rgba(29, 29, 30, 0.5);
+  background-color: #1D1D1E;
   width: 194.52px;
   height: 71.87px;
   border-radius: 100px;
-  border-width: 1px;
+  border: transparent;
 
 }
 
@@ -47,3 +47,4 @@
 .icon{
   padding-right: 0.8rem;
 }
+

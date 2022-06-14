@@ -7,11 +7,12 @@ import { PreviousButton, NextButton, ReadMore } from '../../components/Buttons/C
 function PersonPage() {
   return (
     <div>
-      <NextButton buttonText="Volgende" />
-      <PreviousButton buttonText="Vorige" />
+      <NextButton buttonText="Volgende" icon="FiArrowRightCircle " />
+      <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" />
 
       <div>Image</div>
-      <div className={style.name}>Naam {/* Hier komt naam props  */}</div>
+
+      <div className={style.name}>Naam prop {/* Hier komt naam props  */}</div>
 
       <div className={style.glass}>
         <h6>Front-end Developer</h6>
