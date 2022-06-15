@@ -1,10 +1,9 @@
 import React from 'react';
-import { Person } from '../../components/Person/Component';
 
 function PersonPage() {
   return (
     <>
-      <Person />
+      <h1>perosn page test</h1>
     </>
   );
 }

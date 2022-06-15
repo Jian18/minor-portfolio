@@ -1,10 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import style from '/styles/Home.module.css';
+import style from './Cirkels.module.css';
 
-// components
-import Buttons from '../components/Buttons/Component';
-import Navigation from '../components/Navigation/Component';
 import {
   Cirkel1,
   Cirkel2,
@@ -14,9 +11,9 @@ import {
   Cirkel6,
   Cirkel7,
   Cirkel8,
-} from '../public/assets/bolletjes/cirkel';
+} from '/public/assets/bolletjes/Cirkel.jsx';
 
-export default function HomePage() {
+export function Cirkels() {
   const cirkelRef = useRef();
   const q = gsap.utils.selector(cirkelRef);
 

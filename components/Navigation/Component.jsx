@@ -2,27 +2,27 @@ import React from 'react';
 import style from './Navigation.module.css';
 import Link from 'next/link';
 
-function Navigation() {
+export function Navigation() {
   return (
     <nav className={style.nav}>
       <ul>
         <li>
-          <Link href="/Diam">
+          <Link href="#">
             <a>Diam</a>
           </Link>
         </li>
         <li>
-          <Link href="/Raquel">
+          <Link href="#">
             <a>Raquel</a>
           </Link>
         </li>
         <li>
-          <Link href="/Cidalia">
+          <Link href="#">
             <a>Cidalia</a>
           </Link>
         </li>
         <li>
-          <Link href="/Jian">
+          <Link href="#">
             <a>Jian</a>
           </Link>
         </li>
@@ -30,5 +30,3 @@ function Navigation() {
     </nav>
   );
 }
-
-export default Navigation;
