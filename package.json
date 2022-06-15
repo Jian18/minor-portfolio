@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/client": "^3.3.2",
+    "@sanity/image-url": "^1.0.1",
     "framer-motion": "^6.3.11",
     "gsap": "^3.10.4",
     "next": "12.1.6",
+    "next-sanity": "^0.5.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0"
