@@ -1,3 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .box {
   background-color: #123456;
 }
@@ -6,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 467.04px;
   height: 369.74px;
   background: rgba(29, 29, 30, 0.5);
@@ -16,10 +22,32 @@
   border-radius: 50px;
 }
 
+.nameBackground {
+  background-color: #1d1d1e;
+  width: max-content;
+  border-radius: 50px;
+}
+
 .name {
-  color: #8ee539;
-  display: flex;
-  align-items: center;
-  width: 636px;
-  height: 117px;
+  padding: 4rem 18rem;
+  background: rgb(142, 229, 57);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(142, 229, 57, 1) 0%,
+    rgba(142, 229, 57, 1) 0%,
+    rgba(24, 192, 237, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.projectList {
+  padding: 0.8rem;
+  list-style: none;
+}
+
+.role {
+  font-size: 2.1rem;
+  padding-bottom: 0.8rem;
 }
