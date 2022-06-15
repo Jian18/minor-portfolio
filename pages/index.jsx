@@ -1,7 +1,8 @@
 // components
 import { Buttons } from '../components/Buttons/Component';
-import { Navigation } from '../components/Navigation/Component';
 import { Cirkels } from '../components/Cirkels/Component';
+import { Navigation } from '../components/Navigation/Component';
+
 import { Person } from '../components/Person/Component';
 import { client } from '../lib/client';
 
@@ -22,6 +23,8 @@ export default function HomePage({ personData }) {
       {personData?.map((person) => (
         <Person key={person._id} person={person} />
       ))}
+
+      {/* <Person key={Person._id} person={Person} /> */}
     </>
   );
 }

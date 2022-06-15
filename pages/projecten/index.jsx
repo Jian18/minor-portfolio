@@ -1,4 +1,5 @@
 import React from 'react';
+import { client } from '../../lib/client';
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "project"]';
@@ -9,13 +10,15 @@ export const getServerSideProps = async () => {
 };
 
 function ProjectOverzichtPage({ project }) {
+  console.log(project);
   return (
     <>
-      <ul>
+      {/* <ul>
         {project?.map((project) => (
           <li key={project.key}>{project}</li>
         ))}
-      </ul>
+      </ul> */}
+      projectoverzicht
     </>
   );
 }

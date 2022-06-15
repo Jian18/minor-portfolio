@@ -9,30 +9,22 @@ import { FiCheck } from 'react-icons/fi';
 
 export function NextButton({ buttonText }) {
   return (
-    <div>
-      <button className={style.NextButton}>
-        {buttonText}
-        <FiArrowRightCircle />
-      </button>
-    </div>
+    <button className={style.NextButton}>
+      {buttonText}
+      <FiArrowRightCircle />
+    </button>
   );
 }
 
 export function PreviousButton({ buttonText }) {
   return (
-    <div>
-      <button className={style.PreviousButton}>
-        <FiArrowLeftCircle />
-        {buttonText}
-      </button>
-    </div>
+    <button className={style.PreviousButton}>
+      <FiArrowLeftCircle />
+      {buttonText}
+    </button>
   );
 }
 
 export function ReadMore({ buttonText }) {
-  return (
-    <div>
-      <button className={style.ReadMoreButton}>{buttonText}</button>
-    </div>
-  );
+  return <button className={style.ReadMoreButton}>{buttonText}</button>;
 }
