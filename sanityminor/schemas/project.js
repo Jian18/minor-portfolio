@@ -4,9 +4,9 @@ export default {
   title: 'Project',
   fields: [
     {
-      name: 'name',
+      name: 'projectNaam',
       type: 'string',
-      title: 'Name',
+      title: 'Project naam',
     },
   ],
 };

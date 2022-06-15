@@ -1,0 +1,25 @@
+.box {
+  background-color: #123456;
+}
+
+.glass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 467.04px;
+  height: 369.74px;
+  background: rgba(29, 29, 30, 0.5);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2), inset 0px 2px 1px #c6c6c6,
+    inset 0px 40px 40px rgba(255, 255, 255, 0.24), inset 0px -40px 40px rgba(29, 29, 30, 0.1),
+    inset 0px 6px 12px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(50px);
+  border-radius: 50px;
+}
+
+.name {
+  color: #8ee539;
+  display: flex;
+  align-items: center;
+  width: 636px;
+  height: 117px;
+}
