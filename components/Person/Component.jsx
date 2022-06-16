@@ -2,9 +2,9 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import style from './Person.module.css';
 import { urlFor } from '../../lib/client';
+import Link from 'next/link';
 // import componenten
 import { PreviousButton, NextButton, ReadMore } from '../Buttons/Component';
-import { Cirkels } from '../Cirkels/Component';
 
 export function Person({ person: { name, role, image, Projecten }, next, prev }) {
   return (
@@ -15,7 +15,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
         {/* <Image alt={image.title} src={`${image._ref}`} layout="fill" />
       {console.log(image, 'image')} */}
         <div className={style.nameContainer}>
-          <img alt={urlFor(image)} src={urlFor(image)} className={style.image} />
+          <img alt={image.name} src={urlFor(image).url()} className={style.image} />
           <div className={style.nameBackground}>
             <h3 className={style.name}>{name}</h3>
           </div>
@@ -27,12 +27,15 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             <ul>
               {Projecten.map((project) => (
                 <li key={project._key} className={style.projectList}>
-                  project titel
+                  {project.projectNaam}
                 </li>
               ))}
             </ul>
           </div>
           <div className={style.glassButton}>
+            <Link href={'/projecten'}>
+              <a>Lees meer</a>
+            </Link>
             <ReadMore buttonText="Lees meer" />
           </div>
         </div>

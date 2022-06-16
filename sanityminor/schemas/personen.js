@@ -29,6 +29,7 @@ export default {
     },
     {
       name: 'Projecten',
+      title: 'Projecten',
       type: 'array',
       of: [
         {
@@ -36,7 +37,6 @@ export default {
           to: { type: 'projectDetail' },
         },
       ],
-      title: 'Projecten',
     },
   ],
 };
