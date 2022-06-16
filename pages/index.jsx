@@ -14,8 +14,6 @@ export const getServerSideProps = async () => {
   };
 };
 export default function HomePage({ personData }) {
-  console.log(personData, 'persondata');
-  console.log(personData.image, 'persondata image');
   return (
     <>
       {/* <Navigation /> */}

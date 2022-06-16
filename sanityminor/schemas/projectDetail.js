@@ -12,6 +12,10 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
+      options: {
+        source: 'projectNaam',
+        slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
     },
     {
       name: 'projectImage',
