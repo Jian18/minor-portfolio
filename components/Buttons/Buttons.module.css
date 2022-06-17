@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   padding: 1.6rem 3.2rem 1.6rem 1.6rem;
-  border-radius: 0 100px 100px 0;
+  border-radius: 100px 0 0 100px;
 }
 
 .PreviousButton {
@@ -16,6 +16,7 @@
   align-items: center;
   padding: 1.6rem 3.2rem 1.6rem 1.6rem;
   border-radius: 0 100px 100px 0;
+  border-left: none;
 }
 
 .ReadMoreButton {
