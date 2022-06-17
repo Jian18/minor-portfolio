@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ProjectDetail.module.css';
 
-export function ProductDetail() {
+export function ProjectDetail() {
   return (
     <div className={style.container}>
       <h3 className={style.projectTitel}>Project 1 -</h3>
