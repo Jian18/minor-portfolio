@@ -20,7 +20,6 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             <h3 className={style.name}>{name}</h3>
           </div>
         </div>
-
         <div className={style.glass}>
           <div className={style.glassText}>
             <h6 className={style.role}>{role}</h6>

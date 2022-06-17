@@ -11,7 +11,7 @@ export function NextButton({ buttonText }) {
   return (
     <button className={style.NextButton}>
       {buttonText}
-      <FiArrowRightCircle />
+      <FiArrowRightCircle className={style.arrowRight} />
     </button>
   );
 }
@@ -19,7 +19,7 @@ export function NextButton({ buttonText }) {
 export function PreviousButton({ buttonText }) {
   return (
     <button className={style.PreviousButton}>
-      <FiArrowLeftCircle />
+      <FiArrowLeftCircle className={style.arrowLeft} />
       {buttonText}
     </button>
   );
