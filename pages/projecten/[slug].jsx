@@ -1,4 +1,5 @@
 import React from 'react';
+import { ProjectDetail } from '../../components/ProjectDetail/Component';
 import { client, urlFor } from '../../lib/client';
 
 export const getStaticPaths = async () => {
@@ -37,4 +38,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   };
 };
 
-export default function ProjectPage() {}
+export default function ProjectPage() {
+  console.log('projectDetail');
+  return <ProjectDetail />;
+}

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { PreviousButton, NextButton, ReadMore } from '../Buttons/Component';
 
 export function Person({ person: { name, role, image, Projecten }, next, prev }) {
+  // console.log(image);
   return (
     <>
       <div className={style.container}>
