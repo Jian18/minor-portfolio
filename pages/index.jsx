@@ -31,11 +31,6 @@ export default function HomePage({ personData }) {
       </Head>
       {/* <Navigation /> */}
       <Cirkels />
-      {personData?.map((person) => (
-        <Person key={person._id} person={person} />
-      ))}
-
-      {/* <Person key={Person._id} person={Person} /> */}
     </>
   );
 }

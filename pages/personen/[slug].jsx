@@ -2,6 +2,7 @@ import React from 'react';
 import { Person } from '../../components/Person/Component';
 import { client, urlFor } from '../../lib/client';
 
+import { Cirkels } from '../../components/Cirkels/Component';
 export async function getStaticPaths() {
   const paths = await client.fetch(
     `*[_type == "personen" && defined(slug.current)]{
@@ -18,7 +19,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const query = `*[_type == "personen" && slug.current == "jian"]{
+  const query = `*[_type == "personen" && slug.current == 'jian']{
     name,
     role,
     image,
@@ -47,6 +48,10 @@ export const getStaticProps = async ({ params: { slug } }) => {
 // }
 
 export default function PersonPage({ person }) {
-  console.log('PersonDetail');
-  return <Person person={person} />;
+  return (
+    <>
+      <Cirkels />
+      <Person person={person[0]} />
+    </>
+  );
 }

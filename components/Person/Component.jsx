@@ -7,14 +7,13 @@ import Link from 'next/link';
 import { PreviousButton, NextButton, ReadMore } from '../Buttons/Component';
 
 export function Person({ person: { name, role, image, Projecten }, next, prev }) {
-  // console.log(image);
   return (
     <>
       <div className={style.container}>
         <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" />
 
         {/* <Image alt={image.title} src={`${image._ref}`} layout="fill" />
-      {console.log(image, 'image')} */}
+        {console.log(image, 'image')} */}
         <div className={style.nameContainer}>
           <img alt={image.name} src={urlFor(image).url()} className={style.image} />
           <div className={style.nameBackground}>
@@ -26,7 +25,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             <h6 className={style.role}>{role}</h6>
             <ul>
               {Projecten.map((project) => (
-                <li key={project._key} className={style.projectList}>
+                <li key={project.name} className={style.projectList}>
                   {project.projectNaam}
                 </li>
               ))}
