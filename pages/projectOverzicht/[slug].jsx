@@ -29,7 +29,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
   `;
 
   const project = await client.fetch(query, { slug });
-  console.log(project, 'project consolelog');
   return {
     props: { project },
   };

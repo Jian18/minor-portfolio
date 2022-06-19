@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const query = `*[_type == "project" && slug.current == '${slug}'][0]`;
+  const query = `*[_type == "project" && slug.current == $slug}][0]`;
   const projectenQuery = '*[_type == "project"]';
 
   const project = await client.fetch(query);
@@ -39,6 +39,5 @@ export const getStaticProps = async ({ params: { slug } }) => {
 };
 
 export default function ProjectPage() {
-  console.log('projectDetail');
   return <ProjectDetail />;
 }

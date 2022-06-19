@@ -2,20 +2,26 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import style from './Person.module.css';
 import { urlFor } from '../../lib/client';
-import Link from 'next/link';
+
 // import componenten
 import { PreviousButton, NextButton, ReadMore } from '../Buttons/Component';
 
 export function Person({ person: { name, role, image, Projecten }, next, prev }) {
+  const router = useRouter();
+  const { slug } = router.query;
+  console.log(prev, 'prev', next, 'next');
   return (
     <>
       <div className={style.container}>
-        <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" />
+        <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" buttonLink={prev} />
 
         {/* <Image alt={image.title} src={`${image._ref}`} layout="fill" />
         {console.log(image, 'image')} */}
         <div className={style.nameContainer}>
-          <img alt={image.name} src={urlFor(image).url()} className={style.image} />
+          <picture>
+            <source srcSet={urlFor(image).url()} type="image" />
+            <img alt={image.name} src={urlFor(image).url()} className={style.image} />
+          </picture>
           <div className={style.nameBackground}>
             <h3 className={style.name}>{name}</h3>
           </div>
@@ -32,13 +38,10 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             </ul>
           </div>
           <div className={style.glassButton}>
-            <Link href={'/projectOverzicht/jian'}>
-              <a>Lees meer</a>
-            </Link>
-            <ReadMore buttonText="Lees meer" />
+            <ReadMore buttonText="Lees meer" buttonLink={`/projectOverzicht/${slug}`} />
           </div>
         </div>
-        <NextButton buttonText="Volgende" icon="FiArrowRightCircle " />
+        <NextButton buttonText="Volgende" icon="FiArrowRightCircle" buttonLink={next} />
       </div>
     </>
   );

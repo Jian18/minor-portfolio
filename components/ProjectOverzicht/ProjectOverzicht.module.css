@@ -24,7 +24,7 @@
 }
 
 .projectTitel {
-  color: #8ee539;
+  color: var(--green);
   font-weight: 400;
   font-size: 36px;
 }
@@ -33,4 +33,10 @@
   align-items: flex-end;
   margin-left: 50rem;
   margin-top: 20rem;
+}
+
+.image {
+  max-height: 20rem;
+  max-width: auto;
+  width: 20rem;
 }

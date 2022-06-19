@@ -13,10 +13,14 @@ export function ProjectOverzicht({ project: { Projecten, name } }) {
             <h6 className={style.projectTitel}>{project.projectNaam}</h6>
             <p>{project.description}</p>
             {project.projectImage && (
-              <img alt={project.projectNaam} src={urlFor(project.projectImage).url()} />
+              <img
+                alt={project.projectNaam}
+                src={urlFor(project.projectImage).url()}
+                className={style.image}
+              />
             )}
             <div className={style.glassButton}>
-              <ReadMore buttonText="Lees meer" />
+              <ReadMore buttonText="Lees meer" buttonLink={''} />
             </div>
           </div>
         </div>
