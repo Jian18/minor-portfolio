@@ -31,7 +31,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             <h6 className={style.role}>{role}</h6>
             <ul>
               {Projecten.map((project) => (
-                <li key={project.name} className={style.projectList}>
+                <li key={project._id} className={style.projectList}>
                   {project.projectNaam}
                 </li>
               ))}
