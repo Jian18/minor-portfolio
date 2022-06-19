@@ -47,31 +47,26 @@ export default function PersonPage({ personen, person }) {
 
   const [nextUrl, setNextUrl] = useState(personen[0].slug?.current);
   const [prevUrl, setPrevUrl] = useState(personen[0].slug?.current);
-  console.log(personen.length, 'length');
-  console.log(nextUrl, 'nexturl', prevUrl, 'prevUrl');
 
-  useEffect(
-    (person) => {
-      if (router.query.person != null) {
-        const urlPerson = router.query.person;
-        const foundIndex = person.findIndex((person) => person?.slug?.current === urlPerson);
-        console.log(foundIndex, 'foundIndex');
-        const length = person.length;
-        if (foundIndex === length - 1) {
-          setNextUrl(person[0].slug.current);
-        } else {
-          setNextUrl(person[foundIndex + 1]?.slug.current);
-        }
+  useEffect(() => {
+    if (router.query.slug != null) {
+      const urlPerson = router.query.slug;
+      const foundIndex = personen.findIndex((person) => person?.slug?.current === urlPerson);
 
-        if (foundIndex === 0) {
-          setPrevUrl(person[length - 1].slug.current);
-        } else {
-          setPrevUrl(person[foundIndex - 1].slug.current);
-        }
+      const length = personen.length;
+      if (foundIndex === length - 1) {
+        setNextUrl(personen[0].slug.current);
+      } else {
+        setNextUrl(personen[foundIndex + 1].slug.current);
       }
-    },
-    [router.query.person]
-  );
+
+      if (foundIndex === 0) {
+        setPrevUrl(personen[length - 1].slug.current);
+      } else {
+        setPrevUrl(personen[foundIndex - 1].slug.current);
+      }
+    }
+  }, [personen, router.query.slug]);
 
   return (
     <>

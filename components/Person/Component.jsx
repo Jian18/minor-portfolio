@@ -9,7 +9,6 @@ import { PreviousButton, NextButton, ReadMore } from '../Buttons/Component';
 export function Person({ person: { name, role, image, Projecten }, next, prev }) {
   const router = useRouter();
   const { slug } = router.query;
-  console.log(prev, 'prev', next, 'next');
   return (
     <>
       <div className={style.container}>
