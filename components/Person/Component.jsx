@@ -32,7 +32,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             </ul>
           </div>
           <div className={style.glassButton}>
-            <Link href={'/projecten'}>
+            <Link href={'/projectOverzicht/jian'}>
               <a>Lees meer</a>
             </Link>
             <ReadMore buttonText="Lees meer" />

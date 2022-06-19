@@ -1,6 +1,6 @@
 import React from 'react';
-import { ProjectDetail } from '../../components/ProjectDetail/Component';
-import { client, urlFor } from '../../lib/client';
+import { ProjectDetail } from '../../../components/ProjectDetail/Component';
+import { client, urlFor } from '../../../lib/client';
 
 export const getStaticPaths = async () => {
   const query = `*[_type == "projectDetail"] {

@@ -21,31 +21,28 @@
 
 .ReadMoreButton {
   color: var(--blue-light);
-  background-color: #1D1D1E;
+  background-color: #131313;
   width: 194.52px;
   height: 71.87px;
   border-radius: 100px;
   border: transparent;
-
 }
 
-.NextButton:hover{
+.NextButton:hover {
   background-color: transparent;
   border: white 1px solid;
   color: white;
 }
 
-.PreviousButton:hover{
+.PreviousButton:hover {
   border: white 1px solid;
   color: white;
 }
 
-.ReadMoreButton:hover{
+.ReadMoreButton:hover {
   border: white 1px solid;
-
 }
 
-.icon{
+.icon {
   padding-right: 0.8rem;
 }
-
