@@ -3,22 +3,6 @@ import { ProjectDetail } from '../../components/ProjectDetail/Component';
 import { client, urlFor } from '../../lib/client';
 
 export async function getStaticPaths() {
-  // const paths = await client.fetch(
-  //   `*[_type == "personen"]{
-  //   slug,
-  //   Projecten[] -> {
-  //   'params': {
-  //     'projectSlug': slug.current
-  //     }
-  //   }
-  // } `
-  // );
-
-  // return {
-  //   paths,
-  //   fallback: true,
-  // };
-
   const projects = await client.fetch(
     `*[_type == "projectDetail"] { "projectSlug": slug.current }`
   );
@@ -28,28 +12,16 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params: { projectSlug } }) => {
-  const query = `*[_type == "personen"]{
-    name,
-    slug,
-    Projecten[] -> {
-    projectNaam,
-    description,
-    projectImage,
-    slug
-    }
-  } 
-  `;
-  const projectenQuery = `*[_type == "projectDetail"]`;
-
-  const person = await client.fetch(query, { projectSlug });
+  const projectenQuery = `*[_type == "projectDetail" && slug.current == $projectSlug][0]`;
   const projects = await client.fetch(projectenQuery, { projectSlug });
-  console.log(person, 'personquery- ', projects, 'projectsQuery');
+
+  console.log(projects, 'projectsQuery');
   return {
-    props: { projects, person },
+    props: { projects },
   };
 };
 
-export default function ProjectPage({ projects, person }) {
+export default function ProjectPage({ projects }) {
   console.log('projectDetail pagina');
-  return <ProjectDetail project={projects} person={person} />;
+  return <ProjectDetail project={projects} />;
 }
