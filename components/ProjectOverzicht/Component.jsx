@@ -8,6 +8,7 @@ export function ProjectOverzicht({ project: { Projecten, name } }) {
   const router = useRouter();
   const { projectSlug } = router.query;
   console.log(router.query.projectSlug, 'project', router.query.slug, 'router.slug');
+  console.log(Projecten.map((project) => project.slug.current));
   return (
     <>
       <h3 className={style.projectTitel}>{`${name}'s`} Leerdoelen</h3>
@@ -24,7 +25,10 @@ export function ProjectOverzicht({ project: { Projecten, name } }) {
               />
             )}
             <div className={style.glassButton}>
-              <ReadMore buttonText="Lees meer" buttonLink={`/projectDetail/${projectSlug}`} />
+              <ReadMore
+                buttonText="Lees meer"
+                buttonLink={`/projectDetail/${project.slug.current}`}
+              />
             </div>
           </div>
         </div>

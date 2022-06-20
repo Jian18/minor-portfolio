@@ -24,6 +24,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     projectNaam,
     description,
     projectImage,
+    slug
     } 
   }  
   `;
