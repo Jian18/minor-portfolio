@@ -22,7 +22,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     slug,
     Projecten[] -> {
     projectNaam,
-    description,
+    inleiding,
     projectImage,
     slug
     } 

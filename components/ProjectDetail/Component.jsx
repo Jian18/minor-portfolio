@@ -6,7 +6,7 @@ import { urlFor } from '../../lib/client';
 export function ProjectDetail({ project }) {
   return (
     <div className={style.container}>
-      <div className={style.patroon} />
+      <div className="patroon" />
       <div className={style.textContainer}>
         <h1 className={style.projectTitel}>{project?.projectNaam}</h1>
         <img src={urlFor(project.projectImage).url()} className={style.image} />
@@ -15,7 +15,7 @@ export function ProjectDetail({ project }) {
         <h3 className={style.titel}>Inleiding</h3>
         <PortableText value={project?.inleiding} />
       </div>
-      <div className={style.patroon} />
+      <div className="patroon" />
       <div className={style.textContainer}>
         <h3 className={style.titel}>Situatie - Hoe ben je erop gekomen?</h3>
         <PortableText value={project?.situatie} />
@@ -34,7 +34,7 @@ export function ProjectDetail({ project }) {
         <img src={urlFor(project?.projectImage4).url()} className={style.image} />
         <img src={urlFor(project?.projectImage5).url()} className={style.image} />
       </div>
-      <div className={style.patroon} />
+      <div className="patroon" />
     </div>
   );
 }

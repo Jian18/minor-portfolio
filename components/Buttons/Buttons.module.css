@@ -22,10 +22,11 @@
 .ReadMoreButton {
   color: var(--blue-light);
   background-color: #131313;
-  width: 194.52px;
-  height: 71.87px;
+  width: 20rem;
+  height: 7rem;
   border-radius: 100px;
   border: transparent;
+  font-family: 'DarkerGrotesque-SemiBold';
 }
 
 .NextButton:hover {
