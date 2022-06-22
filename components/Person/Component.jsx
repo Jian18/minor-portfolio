@@ -13,9 +13,6 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
     <>
       <div className={style.container}>
         <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" buttonLink={prev} />
-
-        {/* <Image alt={image.title} src={`${image._ref}`} layout="fill" />
-        {console.log(image, 'image')} */}
         <div className={style.nameContainer}>
           <picture>
             <source srcSet={urlFor(image).url()} type="image" />

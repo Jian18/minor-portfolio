@@ -14,14 +14,11 @@ export async function getStaticPaths() {
 export const getStaticProps = async ({ params: { projectSlug } }) => {
   const projectenQuery = `*[_type == "projectDetail" && slug.current == $projectSlug][0]`;
   const projects = await client.fetch(projectenQuery, { projectSlug });
-
-  console.log(projects, 'projectsQuery');
   return {
     props: { projects },
   };
 };
 
 export default function ProjectPage({ projects }) {
-  console.log('projectDetail pagina');
   return <ProjectDetail project={projects} />;
 }

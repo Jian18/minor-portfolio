@@ -26,6 +26,7 @@ body {
   font-size: 1.6rem;
   color: var(--white);
   overflow-x: hidden;
+  line-height: 1.7;
 }
 
 h1,
