@@ -27,6 +27,7 @@
   border-radius: 100px;
   border: transparent;
   font-family: 'DarkerGrotesque-SemiBold';
+  font-size: 2.1rem;
 }
 
 .NextButton:hover {
@@ -46,4 +47,8 @@
 
 .icon {
   padding-right: 0.8rem;
+}
+
+.arrowLeft {
+  padding-right: 14px;
 }

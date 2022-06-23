@@ -23,7 +23,9 @@ export function PreviousButton({ buttonText, buttonLink }) {
   return (
     <Link href={buttonLink}>
       <button className={style.PreviousButton}>
-        <FiArrowLeftCircle className={style.arrowLeft} />
+        <span className={style.arrowLeft}>
+          <FiArrowLeftCircle />
+        </span>
         {buttonText}
       </button>
     </Link>

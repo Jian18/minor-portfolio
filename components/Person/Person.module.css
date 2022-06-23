@@ -9,8 +9,9 @@
 .nameContainer {
   display: flex;
   flex-direction: column;
-
-  position: relative;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
 }
 
 .box {
@@ -25,15 +26,11 @@
     inset 0px 6px 12px rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(50px);
   border-radius: 50px;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-20%, -80%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  width: 45rem;
 }
 
 .glassText {
@@ -78,6 +75,11 @@
 }
 
 .image {
-  width: 20rem;
-  height: 20rem;
+  width: auto;
+  height: 66rem;
+}
+
+.patroon {
+  position: absolute;
+  bottom: 0;
 }

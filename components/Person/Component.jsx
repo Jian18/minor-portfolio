@@ -38,6 +38,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
           </div>
         </div>
         <NextButton buttonText="Volgende" icon="FiArrowRightCircle" buttonLink={next} />
+        <div className={`patroon ${style.patroon}`} />
       </div>
     </>
   );

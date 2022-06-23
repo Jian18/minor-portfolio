@@ -29,10 +29,18 @@ export function ProjectDetail({ project }) {
         <PortableText value={project?.reflectieResultaat} />
       </div>
       <div className={`${style.imageContainer} ${style.imageContainer}`}>
-        <img src={urlFor(project?.projectImage2).url()} className={style.image} />
-        <img src={urlFor(project?.projectImage3).url()} className={style.image} />
-        <img src={urlFor(project?.projectImage4).url()} className={style.image} />
-        <img src={urlFor(project?.projectImage5).url()} className={style.image} />
+        {project.projectImage2 && (
+          <img src={urlFor(project?.projectImage2).url()} className={style.image} />
+        )}
+        {project.projectImage3 && (
+          <img src={urlFor(project?.projectImage3).url()} className={style.image} />
+        )}
+        {project.projectImage4 && (
+          <img src={urlFor(project?.projectImage4).url()} className={style.image} />
+        )}
+        {project.projectImage5 && (
+          <img src={urlFor(project?.projectImage5).url()} className={style.image} />
+        )}
       </div>
       <div className="patroon" />
     </div>
