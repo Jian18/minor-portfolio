@@ -66,15 +66,12 @@
 
 .name {
   padding: 4rem 0;
-  background: rgb(142, 229, 57);
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(142, 229, 57, 1) 0%,
-    rgba(142, 229, 57, 1) 0%,
-    rgba(24, 192, 237, 1) 100%
-  );
+
+  background: linear-gradient(270deg, #18c0ed -48.03%, #8ee539 188.21%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
   display: inline-block;
   font-size: 3rem;
 }

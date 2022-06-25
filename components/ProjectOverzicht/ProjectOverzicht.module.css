@@ -32,6 +32,12 @@
 .nameTitel {
   text-align: center;
   margin-left: -30rem;
+
+  background: linear-gradient(270deg, #18c0ed -48.03%, #8ee539 188.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .glassButton {
