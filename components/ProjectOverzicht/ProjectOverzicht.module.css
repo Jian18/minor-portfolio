@@ -21,7 +21,11 @@
 .projectTitel {
   color: var(--green);
   font-weight: 400;
-  font-size: 36px;
+  font-size: 3.6rem;
+}
+.nameTitel {
+  text-align: center;
+  margin-left: -30rem;
 }
 
 .glassButton {

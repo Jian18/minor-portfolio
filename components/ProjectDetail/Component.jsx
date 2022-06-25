@@ -9,7 +9,9 @@ export function ProjectDetail({ project }) {
       <div className="patroon" />
       <div className={style.textContainer}>
         <h1 className={style.projectTitel}>{project?.projectNaam}</h1>
-        <img src={urlFor(project.projectImage).url()} className={style.image} />
+        {project.projectImage && (
+          <img src={urlFor(project.projectImage).url()} className={style.image} />
+        )}
       </div>
       <div className={style.textContainer}>
         <h3 className={style.titel}>Inleiding</h3>
