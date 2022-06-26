@@ -12,20 +12,36 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
   const router = useRouter();
   const { slug } = router.query;
 
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+  const slideIn = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        type: 'spring',
+      },
+    },
+  };
+
+  const stagger = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
   };
   return (
     <>
-      <div className={style.container}>
+      <motion.div
+        exit={{ opacity: 0 }}
+        initial={false}
+        animate="animate"
+        className={style.container}
+      >
         <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" buttonLink={prev} />
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-          className={style.childContainer}
-        >
+        <motion.div variants={stagger} className={style.childContainer}>
           <div className={style.nameContainer}>
             <picture>
               <source srcSet={urlFor(image).url()} type="image" />
@@ -35,7 +51,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
               <h3 className={style.name}>{name}</h3>
             </div>
           </div>
-          <div className={style.glass}>
+          <motion.div variants={slideIn} className={style.glass}>
             <div className={style.glassText}>
               <h6 className={style.role}>{role}</h6>
               <ul>
@@ -52,12 +68,12 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             <div className={style.glassButton}>
               <ReadMore buttonText="Lees meer" buttonLink={`/projectOverzicht/${slug}`} />
             </div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <NextButton buttonText="Volgende" icon="FiArrowRightCircle" buttonLink={next} />
         <div className={`patroon ${style.patroon}`} />
-      </div>
+      </motion.div>
     </>
   );
 }

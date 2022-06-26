@@ -21,10 +21,6 @@
   transform: translate(-91%, -50%);
 }
 
-.box {
-  background-color: #123456;
-}
-
 .glass {
   padding: 5rem;
   background: rgba(29, 29, 30, 0.5);
