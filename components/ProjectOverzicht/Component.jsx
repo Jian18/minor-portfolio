@@ -3,15 +3,41 @@ import style from './ProjectOverzicht.module.css';
 import { ReadMore } from '../Buttons/Component';
 import { urlFor } from '../../lib/client';
 import { PortableText } from '@portabletext/react';
+import { motion } from 'framer-motion';
 
 export function ProjectOverzicht({ project: { Projecten, name } }) {
+  const variants = {
+    hidden: {
+      scale: 0.8,
+      opacity: 0,
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+      },
+    },
+  };
   return (
     <>
       <div className="patroon" />
-      <div className={style.mainContainer}>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0 }}
+        variants={variants}
+        className={style.mainContainer}
+      >
         <h3 className={`${style.projectTitel} ${style.nameTitel}`}>{`${name}'s`} Leerdoelen</h3>
         {Projecten.map((project) => (
-          <div className={style.container} key={project.projectNaam}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            className={style.container}
+            key={project.projectNaam}
+          >
             <div className={style.glass}>
               <div className={style.glassLeft}>
                 <h6 className={style.projectTitel}>{project.projectNaam}</h6>
@@ -33,9 +59,9 @@ export function ProjectOverzicht({ project: { Projecten, name } }) {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <div className="patroon" />
     </>
   );
