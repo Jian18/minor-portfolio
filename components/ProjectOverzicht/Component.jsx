@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 export function ProjectOverzicht({ project: { Projecten, name } }) {
   const variants = {
     hidden: {
-      scale: 0.8,
+      scale: 0.5,
       opacity: 0,
     },
     visible: {
