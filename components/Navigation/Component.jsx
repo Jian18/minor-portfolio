@@ -9,7 +9,9 @@ export function Navigation() {
 
   return (
     <div className={style.container}>
-      <Logo className={style.logo} />
+      <Link href="/personen/jian-kootker">
+        <Logo className={style.logo} />
+      </Link>
       <button className={style.button} onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FiX className={style.icon} /> : <FiMenu className={style.icon} />}
       </button>
