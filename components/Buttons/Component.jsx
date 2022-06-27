@@ -4,8 +4,6 @@ import style from './Buttons.module.css';
 // import icons
 import { FiArrowLeftCircle } from 'react-icons/fi';
 import { FiArrowRightCircle } from 'react-icons/fi';
-import { FiAlignRight } from 'react-icons/fi';
-import { FiCheck } from 'react-icons/fi';
 import Link from 'next/link';
 
 export function NextButton({ buttonText, buttonLink }) {
@@ -13,7 +11,9 @@ export function NextButton({ buttonText, buttonLink }) {
     <Link href={buttonLink}>
       <button className={style.NextButton}>
         {buttonText}
-        <FiArrowRightCircle className={style.arrowRight} />
+        <span className={style.arrowRight}>
+          <FiArrowRightCircle />
+        </span>
       </button>
     </Link>
   );

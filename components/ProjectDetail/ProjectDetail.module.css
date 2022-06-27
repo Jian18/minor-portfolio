@@ -9,12 +9,12 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-around;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .textContainer {
-  max-width: 70%;
-  margin: 0 25rem;
+  max-width: 75ch;
+  margin: 4rem 0;
 }
 
 .imageContainer {
@@ -31,4 +31,21 @@
 .image {
   margin: 1.6rem;
   max-width: 45rem;
+}
+
+.bannerImage {
+  max-height: 40rem;
+  max-width: 60vw;
+}
+
+.heroContainer {
+  width: 75ch;
+}
+
+.projectTitel {
+  background: linear-gradient(270deg, #18c0ed -48.03%, #8ee539 188.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

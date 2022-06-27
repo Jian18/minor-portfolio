@@ -16,16 +16,34 @@
     inset 0px 6px 12px rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(50px);
   border-radius: 50px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
 }
 
 .projectTitel {
   color: var(--green);
   font-weight: 400;
-  font-size: 36px;
+  font-size: 3.6rem;
+}
+.nameTitel {
+  text-align: center;
+  margin-left: -30rem;
+
+  background: linear-gradient(270deg, #18c0ed -48.03%, #8ee539 188.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .glassButton {
-  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5rem;
 }
 
 .image {
@@ -59,7 +77,7 @@
     display: none;
   }
 
-  /* target h3?{
- text-align: center;
- } */
+  .glassLeft {
+    width: 40rem;
+  }
 }

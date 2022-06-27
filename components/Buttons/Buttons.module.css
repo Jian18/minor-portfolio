@@ -4,8 +4,11 @@
   color: black;
   display: flex;
   align-items: center;
-  padding: 1.6rem 3.2rem 1.6rem 1.6rem;
+  padding: 3.6rem 2.5rem;
   border-radius: 100px 0 0 100px;
+  border-left: none;
+  font-family: 'DarkerGrotesque-Bold';
+  font-size: 2.4rem;
 }
 
 .PreviousButton {
@@ -14,9 +17,11 @@
   color: var(--blue-light);
   display: flex;
   align-items: center;
-  padding: 1.6rem 3.2rem 1.6rem 1.6rem;
+  padding: 3.6rem 2.5rem;
   border-radius: 0 100px 100px 0;
   border-left: none;
+  font-family: 'DarkerGrotesque-Bold';
+  font-size: 2.4rem;
 }
 
 .ReadMoreButton {
@@ -34,11 +39,13 @@
   background-color: transparent;
   border: white 1px solid;
   color: white;
+  border-right: none;
 }
 
 .PreviousButton:hover {
   border: white 1px solid;
   color: white;
+  border-left: none;
 }
 
 .ReadMoreButton:hover {
@@ -51,4 +58,14 @@
 
 .arrowLeft {
   padding-right: 14px;
+  height: 2.4rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.arrowRight {
+  padding-left: 14px;
+  height: 2.4rem;
+  display: inline-block;
+  vertical-align: middle;
 }
