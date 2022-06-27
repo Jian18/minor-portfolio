@@ -19,7 +19,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
     animate: {
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.9,
         type: 'spring',
       },
     },
@@ -36,7 +36,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
     <>
       <motion.div
         exit={{ opacity: 0 }}
-        initial={false}
+        initial="initial"
         animate="animate"
         className={style.container}
       >
