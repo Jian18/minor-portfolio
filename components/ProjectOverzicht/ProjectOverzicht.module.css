@@ -33,3 +33,33 @@
   max-width: auto;
   width: 20rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    align-content: normal;
+    justify-content: normal;
+  }
+
+  .glass {
+    width: 29.6rem;
+    font-size: 1.6rem;
+    padding: 3rem;
+    line-height: 2.2rem;
+  }
+
+  .glassButton {
+    margin-left: 8rem;
+  }
+
+  .projectTitel {
+    font-size: 1.8rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  /* target h3?{
+ text-align: center;
+ } */
+}

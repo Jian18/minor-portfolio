@@ -64,6 +64,13 @@ a {
 }
 
 @font-face {
+  font-family: 'MuseoModerno-bold';
+  src: url('/assets/fonts/MuseoModerno-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.5;
+}
+@font-face {
   font-family: 'DarkerGrotesque-Black';
   src: url('/assets/fonts/publiDarkerGrotesque-Black.ttf') format('truetype');
 }
