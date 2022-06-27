@@ -29,9 +29,17 @@ export function ProjectOverzicht({ project: { Projecten, name } }) {
         variants={variants}
         className={style.mainContainer}
       >
-        <h3 className={`${style.projectTitel} ${style.nameTitel}`}>{`${name}'s`} Leerdoelen</h3>
+        <motion.h3
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          className={`${style.projectTitel} ${style.nameTitel}`}
+        >
+          {`${name}'s`} Leerdoelen
+        </motion.h3>
         {Projecten.map((project) => (
           <motion.div
+            exit={{ opacity: 0 }}
             initial="hidden"
             animate="visible"
             variants={variants}
