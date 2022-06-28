@@ -15,16 +15,20 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
   const slideIn = {
     initial: {
       opacity: 0,
+      translateX: '1000%',
+      translateZ: '0%',
     },
     animate: {
       opacity: 1,
+      translateX: '-20%',
+      translateZ: '-80%',
       transition: {
         duration: 0.9,
         type: 'spring',
       },
     },
   };
-
+  // translate(-20%, -80%)
   const stagger = {
     animate: {
       transition: {
@@ -51,7 +55,12 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
               <h3 className={style.name}>{name}</h3>
             </div>
           </div>
-          <motion.div variants={slideIn} className={style.glass}>
+          <motion.div
+            variants={slideIn}
+            initial="initial"
+            animate="animate"
+            className={style.glass}
+          >
             <div className={style.glassText}>
               <h6 className={style.role}>{role}</h6>
               <ul>
