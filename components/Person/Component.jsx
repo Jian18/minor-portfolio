@@ -15,13 +15,13 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
   const slideIn = {
     initial: {
       opacity: 0,
-      translateX: '1000%',
-      translateZ: '0%',
+      // translateX: '1000%',
+      // translateZ: '0%',
     },
     animate: {
       opacity: 1,
-      translateX: '-20%',
-      translateZ: '-80%',
+      // translateX: '-20%',
+      // translateZ: '-80%',
       transition: {
         duration: 0.9,
         type: 'spring',
@@ -42,6 +42,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
         exit={{ opacity: 0 }}
         initial="initial"
         animate="animate"
+        key={router.route}
         className={style.container}
       >
         <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" buttonLink={prev} />
@@ -59,6 +60,9 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
             variants={slideIn}
             initial="initial"
             animate="animate"
+            exit={{ opacity: 0 }}
+            transition={{ type: 'spring' }}
+            key={router.route}
             className={style.glass}
           >
             <div className={style.glassText}>
