@@ -1,17 +1,19 @@
 import '../styles/globals.css';
 import { Navigation } from '../components/Navigation/Component';
 import { LazyMotion, domAnimation, m, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
 
 function MyApp({ Component, pageProps, router }) {
-  const startIndex = 0;
-
   return (
     <LazyMotion features={domAnimation}>
       <AnimatePresence exitBeforeEnter>
-        <m.div initial="initial" animate="animate" exit="exit" key={router.pathname}>
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key={router.route}
+        >
           <Navigation />
-          <Component {...pageProps} key={router.pathname} />
+          <Component {...pageProps} key={router.route} />
         </m.div>
       </AnimatePresence>
     </LazyMotion>
