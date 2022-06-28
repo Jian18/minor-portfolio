@@ -2,10 +2,26 @@ import React from 'react';
 import style from './ProjectDetail.module.css';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '../../lib/client';
+import { motion } from 'framer-motion';
 
 export function ProjectDetail({ project }) {
+  const variant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
   return (
-    <div className={style.container}>
+    <motion.div
+      initial="hidden"
+      exit={{ opacity: 0 }}
+      animate="show"
+      variants={variant}
+      className={style.container}
+    >
       <div className="patroon" />
       <div className={style.heroContainer}>
         <h1 className={style.projectTitel}>{project?.projectNaam}</h1>
@@ -45,6 +61,6 @@ export function ProjectDetail({ project }) {
         )}
       </div>
       <div className="patroon" />
-    </div>
+    </motion.div>
   );
 }

@@ -3,12 +3,24 @@ import style from './Navigation.module.css';
 import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Logo } from '../../public/assets/Logo';
+import { motion } from 'framer-motion';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const animate = {
+    hidden: {
+      opaciity: 0,
+      x: 1000,
+    },
+    show: {
+      opaciity: 1,
+      x: 0,
+    },
+  };
+
   return (
-    <div className={style.container}>
+    <div>
       <Link href="/personen/jian-kootker">
         <Logo className={style.logo} />
       </Link>
@@ -16,7 +28,14 @@ export function Navigation() {
         {isOpen ? <FiX className={style.icon} /> : <FiMenu className={style.icon} />}
       </button>
       {isOpen && (
-        <nav className={style.nav} onClick={() => setIsOpen(!isOpen)}>
+        <motion.nav
+          initial="hidden"
+          exit={{ opacity: 0, x: -1000 }}
+          animate="show"
+          variants={animate}
+          className={style.nav}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <ul>
             <li className={style.li}>
               <Link href="/projectOverzicht/diam-kanbier">
@@ -48,7 +67,7 @@ export function Navigation() {
               </Link>
             </li>
           </ul>
-        </nav>
+        </motion.nav>
       )}
     </div>
   );
