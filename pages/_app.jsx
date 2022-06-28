@@ -4,7 +4,7 @@ import { Navigation } from '../components/Navigation/Component';
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence exitBeforeEnter initial={false}>
       <Navigation />
       <Component {...pageProps} key={router.route} />
     </AnimatePresence>
