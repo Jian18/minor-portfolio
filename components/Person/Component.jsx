@@ -22,7 +22,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-        delayChildren: 1.2,
+        delayChildren: 0.9,
       },
     },
   };
@@ -32,6 +32,7 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
       initial="initial"
       animate="animate"
       variants={content}
+      key={slug}
       className={style.container}
     >
       <PreviousButton buttonText="Vorige" icon="FiArrowLeftCircle" buttonLink={prev} />
