@@ -6,14 +6,17 @@ import { motion } from 'framer-motion';
 
 export function ProjectDetail({ project }) {
   const variant = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, x: 1000 },
     show: {
+      x: 0,
       opacity: 1,
       transition: {
         staggerChildren: 0.5,
+        type: 'spring',
       },
     },
   };
+
   return (
     <motion.div
       initial="hidden"

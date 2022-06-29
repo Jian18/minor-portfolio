@@ -21,8 +21,8 @@ export function Person({ person: { name, role, image, Projecten }, next, prev })
       x: 0,
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.9,
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
       },
     },
   };
